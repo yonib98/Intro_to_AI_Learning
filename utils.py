@@ -14,8 +14,8 @@ from sklearn.model_selection import KFold
 ========================================================================
 """
 
-ID1 = 123456789  # TODO: change it to your personal ID 
-ID2 = 987654321  # TODO: change it to your personal ID 
+ID1 = 319093902
+ID2 = 209194455 # TODO do we want to change ID2 as well ? the .pdf file says to change only ID1
 
 
 ID_KEY = ID1+ID2%1000000000
@@ -41,9 +41,8 @@ def accuracy(y: np.array, y_pred: np.array):
     assert y.shape == y_pred.shape
     assert y.ndim == 1
 
-    # ====== YOUR CODE: ======
-    raise NotImplementedError
-    # ========================
+    # Calculate prediction accuracy
+    accuracy_val = np.mean(y == y_pred)
 
     return accuracy_val
 
